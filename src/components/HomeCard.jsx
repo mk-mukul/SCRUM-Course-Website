@@ -7,12 +7,12 @@ import Button from "./Button"
 
 const HomeCard = () => {
     return (
-        <div className=' w-80 pb-5 rounded-xl shadow-2xl hover:shadow-xl'>
+        <div className=' w-full pb-5 rounded-xl shadow-2xl hover:shadow-xl'>
             <img width={"100%"} className=' rounded-t-xl' src={img} alt="card" />
             <div className=' px-7 pt-3'>
                 <div className=' relative flex justify-center'>
                     <h3 className=' font-semibold'>Learn SCRUM: The Complete Beginner Course</h3>
-                    <div className=' w-6'>
+                    <div className=' w-6 pt-2 cursor-pointer'>
                         <img src={bookmark} alt="bookmark" />
                     </div>
                 </div>
@@ -40,7 +40,7 @@ const HomeCard = () => {
                     </div>
                 </div>
                 <div className=' flex mt-3'>
-                    <Button className=" text-blue border-blue" text={"ENROLL NOW"} />
+                    <Button className=" text-blue border-blue hover:text-white hover:bg-blue transition-all" text={"ENROLL NOW"} />
                 </div>
             </div>
         </div>

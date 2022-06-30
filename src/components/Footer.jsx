@@ -19,14 +19,14 @@ const Footer = () => {
                     <p className='mt-3 text-dark-text'>We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p>
                     <div className=' mt-6 grid grid-cols-2 gap-4'>
                         <div className='flex gap-3'>
-                            <Icon src={call} />
+                            <Icon name="call" src={call} />
                             <div>
                                 <p className='text-dark-text' >Have a question?</p>
                                 <p className=' text-lg font-medium'>310-437-2766</p>
                             </div>
                         </div>
                         <div className='flex gap-3'>
-                            <Icon src={sms} />
+                            <Icon name="sms" src={sms} />
                             <div>
                                 <p className='text-dark-text' > Contact us at </p>
                                 <p className=' text-lg font-medium'>unreal@outlook.com</p>
@@ -45,7 +45,7 @@ const Footer = () => {
                             <input className=' px-2 bg-dark-secondary focus:outline-none' type="text" name='email' placeholder='Enter your email'
                                 value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
-                        <button className=' py-3 px-7 bg-dark-primary rounded-full text-sm cursor-pointer'>
+                        <button onClick={()=>{alert(email?"Email:"+email+"\nSubmitted":"Enter email")}} className=' py-3 px-7 bg-dark-primary rounded-full text-sm cursor-pointer'>
                             Submit
                         </button>
                     </div>
@@ -54,24 +54,24 @@ const Footer = () => {
             <div className=' pt-0.5 bg-dark-secondary' />
             <div className='px-36 py-10'>
                 <ul className=' flex justify-between gap-1 text-dark-text'>
-                    <li>Aboutus</li>
-                    <li>Jobs</li>
-                    <li>Blog</li>
-                    <li>Press</li>
-                    <li>FAQ</li>
-                    <li>Careers</li>
-                    <li>Contact</li>
-                    <li>Privacy policy</li>
-                    <li>Sitemap</li>
-                    <li>Terms of Use</li>
+                    <li className=' cursor-pointer'><a href="#">Aboutus</a></li>
+                    <li className=' cursor-pointer'><a href="#">Jobs</a></li>
+                    <li className=' cursor-pointer'><a href="#">Blog</a></li>
+                    <li className=' cursor-pointer'><a href="#">Press</a></li>
+                    <li className=' cursor-pointer'><a href="#">FAQ</a></li>
+                    <li className=' cursor-pointer'><a href="#">Careers</a></li>
+                    <li className=' cursor-pointer'><a href="#">Contact</a></li>
+                    <li className=' cursor-pointer'><a href="#">Privacy policy</a></li>
+                    <li className=' cursor-pointer'><a href="#">Sitemap</a></li>
+                    <li className=' cursor-pointer'><a href="#">Terms of Use</a></li>
                 </ul>
                 <div className=' mt-8 flex justify-between items-center'>
                     <div className='flex gap-2'>
-                        <Icon src={facebook} />
-                        <Icon src={youtube} />
-                        <Icon src={dribbble} />
-                        <Icon src={figma} />
-                        <Icon src={whatsapp} />
+                        <Icon name="facebook" src={facebook} />
+                        <Icon name="youtube" src={youtube} />
+                        <Icon name="dribbble" src={dribbble} />
+                        <Icon name="figma" src={figma} />
+                        <Icon name="whatsapp" src={whatsapp} />
                     </div>
                     <div>
                         <p className='text-dark-text'> <span className=' text-lg'>©</span>2000-2021, All Right Reserved</p>

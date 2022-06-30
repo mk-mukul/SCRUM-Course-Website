@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../components/Button'
 import TimeCard from '../components/TimeCard'
 import img1 from '../assets/images/Ellipse 1.png'
@@ -19,8 +19,29 @@ import HomeCard from '../components/HomeCard'
 import HomeIcon from '../components/HomeIcon'
 
 const Home = () => {
+  const [hour, setHour] = useState(3)
+  const [minute, setMinute] = useState(0)
+  const [second, setSecond] = useState(15)
+  useEffect(() => {
+    setInterval(() => {
+      setSecond((prev)=>{
+        if (prev==0) {
+          setMinute((prev)=>{
+            if (prev==0) {
+              setHour((prev)=>{return prev!=0?prev-1:11});
+              return 59;
+            }
+            return prev-1;
+          })
+          return 59;
+        }
+        return prev-1;
+      })
+    }, 1000);
+  }, [])
+  
   return (
-    <main className='bg-white'>
+    <main className='bg-white overflow-x-hidden'>
       <section className='grid grid-cols-2 gap-28 bg-purple px-20 text-white'>
         <div className=' flex flex-col py-16 my-4'>
           <div className='flex'>
@@ -31,16 +52,16 @@ const Home = () => {
             <p>Grab More Attention To Resume</p>
           </div>
           <div className='flex mt-8'>
-            <Button text="ENROLL NOW" />
+            <Button className="hover:text-purple hover:bg-white transition-all" text="ENROLL NOW" />
           </div>
           <div>
             <div className='mt-8 py-10 flex flex-col items-center w-max'>
               <p className=' font-semibold'>10% OFF on all cources*|Offer Valid For</p>
               <div className=' mt-1 h-0.5 w-14 bg-white'></div>
               <div className='flex gap-8 mt-3'>
-                <TimeCard label="Hrs." value={"02"} />
-                <TimeCard label="Mins." value={"58"} />
-                <TimeCard label="Secs." value={"42"} />
+                <TimeCard label="Hrs." value={hour<10?"0"+hour:hour} />
+                <TimeCard label="Mins." value={minute<10?"0"+minute:minute} />
+                <TimeCard label="Secs." value={second<10?"0"+second:second} />
               </div>
             </div>
           </div>
@@ -62,24 +83,29 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='px-16 pt-24'>
+      <section className='px-16 mt-24 mb-8'>
         <h2 className=' text-lg font-bold'>A broad range of courses</h2>
         <h3 className=' mt-3 text-lg'>Choose from 100+ online video courses with new additions published every month</h3>
-        <div className=' flex grid-cols-4 gap-8 mt-16'>
-          <HomeCard />
-          <HomeCard />
-          <HomeCard />
-          <HomeCard />
+        <div className=' flex gap-20 justify-between items-center'>
+          <div className=' w-full grid gap-8 grid-cols-4 overflow-x-scroll py-16'>
+            <HomeCard />
+            <HomeCard />
+            <HomeCard />
+            <HomeCard />
+          </div>
+          <div className=' cursor-pointer justify-self-end'>
+            <img src={rightArrow} alt="right arrow" />
+          </div>
         </div>
       </section>
 
-      <section className='px-16 pt-24'>
+      <section className='px-16'>
         <div className=' px-14 grid items-center gap-20 grid-cols-2'>
           <div>
             <h1 className=' w-96 pr-12 text-purple text-4xl font-semibold'>Start learning with us right now!</h1>
             <p className=' mt-3 w-72'>Choose from 100+ online video courses with new updates.</p>
             <div className='flex mt-6'>
-              <Button className="text-blue border-blue" text="ENROLL NOW" />
+              <Button className="text-blue border-blue hover:text-white hover:bg-blue transition-all" text="ENROLL NOW" />
             </div>
           </div>
           <div className='grid items-center gap-x-16 grid-cols-2'>
@@ -118,7 +144,7 @@ const Home = () => {
           <div className=' h-0.5 bg-blue px-56' />
         </div>
         <div className=' pt-14 pb-10 flex gap-80 justify-between items-center'>
-          <div><img width={80} src={leftArrow} alt="left arrow" /></div>
+          <div className=' cursor-pointer'><img width={80} src={leftArrow} alt="left arrow" /></div>
           <div className=' text-center'>
             <div className=' mb-16 flex justify-center items-center gap-8'>
               <div className=' opacity-25'>
@@ -135,7 +161,7 @@ const Home = () => {
               <p className=' font-semibold'>Learner, Govt. Employee @UPPCL</p>
             </div>
           </div>
-          <div><img width={80} src={rightArrow} alt="right arrow" /></div>
+          <div className=' cursor-pointer'><img width={80} src={rightArrow} alt="right arrow" /></div>
         </div>
       </section>
 

@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Icon = ({src}) => {
+const Icon = ({src, name}) => {
   return (
-    <div className=' w-12 h-12 bg-dark-stroke flex justify-center rounded-full cursor-pointer'>
+    <a href={"#"+name} className=' w-12 h-12 bg-dark-stroke flex justify-center rounded-full cursor-pointer'>
         <img className=' self-center' src={src} alt="socials" />
-    </div>
+    </a>
   )
 }
 
