@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/SCRUM-Course-Website/static/css/main.271d1b64.chunk.css",
+    "main.js": "/SCRUM-Course-Website/static/js/main.0f96bff9.chunk.js",
+    "main.js.map": "/SCRUM-Course-Website/static/js/main.0f96bff9.chunk.js.map",
+    "runtime-main.js": "/SCRUM-Course-Website/static/js/runtime-main.8a3ce923.js",
+    "runtime-main.js.map": "/SCRUM-Course-Website/static/js/runtime-main.8a3ce923.js.map",
+    "static/js/2.cbd9248b.chunk.js": "/SCRUM-Course-Website/static/js/2.cbd9248b.chunk.js",
+    "static/js/2.cbd9248b.chunk.js.map": "/SCRUM-Course-Website/static/js/2.cbd9248b.chunk.js.map",
+    "index.html": "/SCRUM-Course-Website/index.html",
+    "static/css/main.271d1b64.chunk.css.map": "/SCRUM-Course-Website/static/css/main.271d1b64.chunk.css.map",
+    "static/js/2.cbd9248b.chunk.js.LICENSE.txt": "/SCRUM-Course-Website/static/js/2.cbd9248b.chunk.js.LICENSE.txt",
+    "static/media/Ellipse 1.3bc6381d.png": "/SCRUM-Course-Website/static/media/Ellipse 1.3bc6381d.png",
+    "static/media/Ellipse 2.cae459a0.png": "/SCRUM-Course-Website/static/media/Ellipse 2.cae459a0.png",
+    "static/media/Ellipse 3.e35babe0.png": "/SCRUM-Course-Website/static/media/Ellipse 3.e35babe0.png",
+    "static/media/Ellipse 4.8b09f716.png": "/SCRUM-Course-Website/static/media/Ellipse 4.8b09f716.png",
+    "static/media/Rectangle 5.a7739556.png": "/SCRUM-Course-Website/static/media/Rectangle 5.a7739556.png",
+    "static/media/unsplash1.a18c0cc7.png": "/SCRUM-Course-Website/static/media/unsplash1.a18c0cc7.png",
+    "static/media/unsplash3.d367a6d4.png": "/SCRUM-Course-Website/static/media/unsplash3.d367a6d4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a3ce923.js",
+    "static/js/2.cbd9248b.chunk.js",
+    "static/css/main.271d1b64.chunk.css",
+    "static/js/main.0f96bff9.chunk.js"
+  ]
+}
