@@ -5,6 +5,11 @@ module.exports = {
       colors: {
         purple: "#9921E8",
         blue: "#5F72BE",
+        skyBlue: "#2D81F7",
+        red: "#FE5702",
+        green: "#08BD80",
+        maroon: "#EB5757",
+        orange: "#FFAD3B",
         dark: {
           text: "#8C8C8C",
           background: "#27282B",
