@@ -14,7 +14,6 @@ export default function App() {
         </Switch> */}
         <Home />
         <Footer />
-        {/* <Redirect to={process.env.PUBLIC_URL} /> */}
       </Router>
     </>
   )

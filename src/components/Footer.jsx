@@ -13,11 +13,11 @@ const Footer = () => {
     const [email, setEmail] = useState("")
     return (
         <footer className=' text-white bg-dark-background'>
-            <div className=' px-36 py-12 grid grid-cols-2 gap-28'>
+            <div className=' px-4 md:px-16 lg:px-36 py-12 grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-28'>
                 <div>
                     <h2 className=' font-bold text-2xl'>Logo</h2>
                     <p className='mt-3 text-dark-text'>We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p>
-                    <div className=' mt-6 grid grid-cols-2 gap-4'>
+                    <div className=' mt-6 grid lg:grid-cols-2 gap-4'>
                         <div className='flex gap-3'>
                             <Icon name="call" src={call} />
                             <div>
@@ -39,10 +39,10 @@ const Footer = () => {
                     <p className=' mt-3 text-dark-text'>Be the first one to know  about discounts, offers and events weekly in your mailbox. Unsubscribe whenever you like with one click.</p>
                     <div className=' mt-6 p-2 rounded-full bg-dark-secondary flex justify-between'>
                         <div className=' px-5 flex'>
-                            <div className=' self-center'>
+                            <div className=' w-6 self-center'>
                                 <img src={smsDark} />
                             </div>
-                            <input className=' px-2 bg-dark-secondary focus:outline-none' type="text" name='email' placeholder='Enter your email'
+                            <input className=' w-36 md:w-40 bg-dark-secondary focus:outline-none' type="text" name='email' placeholder='Enter your email'
                                 value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <button onClick={()=>{alert(email?"Email:"+email+"\nSubmitted":"Enter email")}} className=' py-3 px-7 bg-dark-primary rounded-full text-sm cursor-pointer'>
@@ -52,8 +52,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className=' pt-0.5 bg-dark-secondary' />
-            <div className='px-36 py-10'>
-                <ul className=' flex justify-between gap-1 text-dark-text'>
+            <div className=' px-4 md:px-16 lg:px-36 py-10'>
+                <ul className=' flex flex-wrap justify-between gap-x-4 gap-y-2 text-dark-text'>
                     <li className=' cursor-pointer'><a href="#">Aboutus</a></li>
                     <li className=' cursor-pointer'><a href="#">Jobs</a></li>
                     <li className=' cursor-pointer'><a href="#">Blog</a></li>
@@ -65,7 +65,7 @@ const Footer = () => {
                     <li className=' cursor-pointer'><a href="#">Sitemap</a></li>
                     <li className=' cursor-pointer'><a href="#">Terms of Use</a></li>
                 </ul>
-                <div className=' mt-8 flex justify-between items-center'>
+                <div className=' mt-8 flex flex-wrap justify-center md:justify-between items-center gap-8'>
                     <div className='flex gap-2'>
                         <Icon name="facebook" src={facebook} />
                         <Icon name="youtube" src={youtube} />
