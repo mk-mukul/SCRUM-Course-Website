@@ -6,7 +6,7 @@ import img2 from '../assets/images/Ellipse 2.png'
 import img3 from '../assets/images/Ellipse 3.png'
 import img4 from '../assets/images/Ellipse 4.png'
 import unsplash1 from '../assets/images/unsplash1.png'
-import unsplash2 from '../assets/images/unsplash1.png'
+import unsplash2 from '../assets/images/unsplash2.png'
 import unsplash3 from '../assets/images/unsplash3.png'
 import training from '../assets/icons/training.png'
 import view from '../assets/icons/view.png'
@@ -24,22 +24,22 @@ const Home = () => {
   const [second, setSecond] = useState(15)
   useEffect(() => {
     setInterval(() => {
-      setSecond((prev)=>{
-        if (prev==0) {
-          setMinute((prev)=>{
-            if (prev==0) {
-              setHour((prev)=>{return prev!=0?prev-1:11});
+      setSecond((prev) => {
+        if (prev == 0) {
+          setMinute((prev) => {
+            if (prev == 0) {
+              setHour((prev) => { return prev != 0 ? prev - 1 : 11 });
               return 59;
             }
-            return prev-1;
+            return prev - 1;
           })
           return 59;
         }
-        return prev-1;
+        return prev - 1;
       })
     }, 1000);
   }, [])
-  
+
   return (
     <main className='bg-white overflow-x-hidden'>
       <section className='grid pt-16 md:pt-28 lg:pt-48 md:grid-cols-2 gap-28 bg-purple px-4 md:px-10 lg:px-20 text-white'>
@@ -58,9 +58,9 @@ const Home = () => {
               <p className=' font-semibold'>10% OFF on all cources*|Offer Valid For</p>
               <div className=' mt-1 h-0.5 w-14 bg-white'></div>
               <div className='flex gap-8 mt-3'>
-                <TimeCard label="Hrs." value={hour<10?"0"+hour:hour} />
-                <TimeCard label="Mins." value={minute<10?"0"+minute:minute} />
-                <TimeCard label="Secs." value={second<10?"0"+second:second} />
+                <TimeCard label="Hrs." value={hour < 10 ? "0" + hour : hour} />
+                <TimeCard label="Mins." value={minute < 10 ? "0" + minute : minute} />
+                <TimeCard label="Secs." value={second < 10 ? "0" + second : second} />
               </div>
             </div>
           </div>
@@ -82,17 +82,22 @@ const Home = () => {
         </div>
       </section>
 
-      <section className=' px-4 md:px-10 lg:px-16 mt-24 mb-8'>
-        <h2 className=' text-lg font-bold'>A broad range of courses</h2>
-        <h3 className=' mt-3 text-base md:text-lg'>Choose from 100+ online video courses with new additions published every month</h3>
-        <div className=' flex gap-20 justify-between items-center'>
-          <div className=' w-full grid gap-8 md:grid-cols-2 lg:grid-cols-4 overflow-x-scroll px-4 md:px-8 py-16'>
+      <section className=' mt-24 mb-8'>
+        <h2 className='px-4 md:px-10 lg:px-16 text-lg font-bold'>A broad range of courses</h2>
+        <h3 className='px-4 md:px-10 lg:px-16 mt-3 text-base md:text-lg'>Choose from 100+ online video courses with new additions published every month</h3>
+        <div className=' w-screen flex items-center'>
+          <div className=' absolute bg-black bg-opacity-20 left-0 cursor-pointer'>
+            <img src={leftArrow} alt="left arrow" />
+          </div>
+          <div className=' flex gap-8 md:grid-cols-2 lg:grid-cols-4 overflow-x-auto px-4 md:px-8 py-16' style={{ scrollbarWidth: "none" }}>
+            <HomeCard />
+            <HomeCard />
             <HomeCard />
             <HomeCard />
             <HomeCard />
             <HomeCard />
           </div>
-          <div className=' hidden cursor-pointer justify-self-end'>
+          <div className=' absolute bg-black bg-opacity-20 right-0 cursor-pointer'>
             <img src={rightArrow} alt="right arrow" />
           </div>
         </div>
@@ -101,7 +106,7 @@ const Home = () => {
       <section className='px-4 md:px-10 lg:px-16'>
         <div className=' md:px-6 lg:px-14 grid items-center gap-y-16 md:grid-cols-2'>
           <div>
-            <h1 className=' w-96 md:pr-12 text-purple text-4xl font-semibold'>Start learning with us right now!</h1>
+            <h1 className=' max-w-sm md:pr-12 text-purple text-4xl font-semibold'>Start learning with us right now!</h1>
             <p className=' mt-3 w-72'>Choose from 100+ online video courses with new updates.</p>
             <div className='flex mt-6'>
               <Button className="text-blue border-blue hover:text-white hover:bg-blue transition-all" text="ENROLL NOW" />
@@ -147,11 +152,13 @@ const Home = () => {
           <div className=' text-center'>
             <div className=' mb-16 flex justify-center items-center gap-8'>
               <div className=' opacity-25'>
-                <img width={75} src={unsplash1} alt="unsplash" />
+                <img className=' rounded-full' width={75} src={unsplash1} alt="unsplash" />
               </div>
-              <img src={unsplash2} alt="unsplash" />
+              <div className=''>
+                <img className=' rounded-full' src={unsplash2} alt="unsplash" />
+              </div>
               <div className=' opacity-25'>
-                <img width={75} src={unsplash3} alt="unsplash" />
+                <img className=' rounded-full' width={75} src={unsplash3} alt="unsplash" />
               </div>
             </div>
             <p className=' md:max-w-2xl'>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>

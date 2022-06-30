@@ -7,7 +7,7 @@ import Button from "./Button"
 
 const HomeCard = () => {
     return (
-        <div className=' w-full pb-5 rounded-xl shadow-2xl hover:shadow-xl'>
+        <div className=' pb-5 rounded-xl shadow-2xl hover:shadow-xl' style={{minWidth: '380px'}}>
             <img width={"100%"} className=' rounded-t-xl' src={img} alt="card" />
             <div className=' px-7 pt-3'>
                 <div className=' relative flex justify-center'>
